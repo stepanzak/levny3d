@@ -1,0 +1,354 @@
+@import url("https://fonts.googleapis.com/css2?family=Lexend:wght@300;500;700;900&display=swap");
+
+:root {
+	--3D-orange: hsl(16, 74%, 53%);
+	--3D-orange-darker: hsl(16, 90%, 40%);
+	font-family: "Lexend", sans-serif;
+}
+
+html {
+	scroll-behavior: smooth;
+	overflow-x: hidden;
+}
+
+body {
+	margin: 0;
+	overflow-x: hidden;
+}
+
+@keyframes beat {
+	0%,
+	90% {
+		transform: scale(1) rotate(-35deg);
+	}
+	45% {
+		transform: scale(1.25) rotate(-35deg);
+	}
+
+	/*animation: beat 1s ease-in-out 0s infinite normal;*/
+}
+
+/*navigation bar at the top*/
+.top-bar {
+	position: fixed;
+	z-index: 10;
+	display: flex;
+	flex-direction: row;
+	width: 100vw;
+	height: 5rem;
+	align-items: center;
+	justify-content: space-between;
+	background-color: var(--3D-orange);
+	overflow: hidden;
+}
+
+.logo-small {
+	width: 70px;
+}
+
+.links {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: flex-end;
+	margin: 0;
+	margin-right: 2rem;
+	height: 100%;
+	text-align: center;
+}
+
+.links > a {
+	list-style: none;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 0 2rem;
+	text-decoration: none;
+	user-select: none;
+	background-color: var(--3D-orange);
+	color: black;
+	font-size: large;
+}
+
+.links > a.get-custom-model {
+ border: 3px solid black;
+  border-radius: 3rem;
+  max-height: 60px;
+  margin: 0.5rem;
+}
+
+.links > a:hover {
+	background-color: var(--3D-orange-darker);
+}
+
+@media screen and (max-width: 1000px) {
+	.top-bar {
+		display: none;
+	}
+}
+
+/*big intro (name and image of 3D printer)*/
+
+.intro {
+	height: 100vh;
+	min-height: 750px;
+	max-height: 1200px;
+	display: flex;
+	flex-direction: column;
+	background-color: white;
+	margin: 0;
+	padding: 0;
+}
+
+.intro-title {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	scroll-margin-top: 5rem;
+}
+
+.intro-title > h1 {
+	font-size: 15rem;
+	margin-top: 3rem;
+	color: black;
+}
+
+/*Shiny "levně" title*/
+.with-supplement::after {
+	content: "LEVNĚ!";
+	font-size: 5rem;
+	background: #ffee00;
+	background: linear-gradient(to bottom, #ffee00 0%, #ff7d26 50%, #ffee00 100%);
+	-webkit-background-clip: text;
+	background-clip: text;
+	-webkit-text-fill-color: transparent;
+	text-shadow: 1px 1px 20px orange;
+	display: inline-block;
+	position: relative;
+	right: 10rem;
+	top: 2rem;
+	width: 20rem;
+	margin-right: -20rem;
+	transform: rotate(-35deg);
+	animation: beat 1s ease-in-out 0s infinite normal;
+}
+
+.logo-big {
+	width: 20rem;
+	height: auto;
+}
+
+.description {
+	color: black;
+	font-size: 1.5rem;
+	text-align: center;
+}
+
+/*responsive intro*/
+
+@media screen and (min-width: 1000px) and (max-width: 1400px) {
+	.intro-title > h1 {
+		font-size: calc(10vw);
+	}
+
+	.logo-big {
+		padding-top: 90px;
+	}
+}
+
+@media screen and (max-width: 1000px) {
+	/*I love responsive webdesign 💀*/
+	.main {
+		padding-top: 0;
+	}
+
+	.intro-title {
+		flex-direction: column;
+		align-items: center;
+		scroll-margin-top: 5rem;
+	}
+
+	.intro-title > h1 {
+		font-size: 10rem;
+		margin: -2rem auto;
+		text-align: center;
+	}
+
+	#tisk-title {
+		font-size: 7rem;
+		order: 2;
+		margin-bottom: 0;
+	}
+
+	#3D-title {
+		order: 1;
+	}
+
+	/*Shiny "levně" title*/
+	.with-supplement::after {
+		font-size: 2rem;
+		display: inline-block;
+
+		position: relative;
+		right: 12rem;
+		top: 1rem;
+		width: 20rem;
+		transform: rotate(-35deg);
+		font-weight: 1000;
+	}
+
+	.logo-big {
+		width: 15rem;
+		order: 3;
+	}
+	/*end of responsive intro*/
+}
+/*pros*/
+
+.main {
+	padding-top: 5rem;
+}
+
+.pros {
+	width: 1000px;
+	margin: 0 auto;
+	scroll-margin-top: 5rem;
+}
+
+.pro {
+	display: flex;
+	justify-content: space-between;
+	padding: 2rem 0;
+}
+
+.right-to-left {
+	flex-direction: row-reverse;
+}
+
+.right-to-left h2 {
+	text-align: right;
+	padding-right: 2rem;
+}
+
+.pro h2 {
+	font-size: 2rem;
+}
+
+.pro p {
+	font-size: 1.5rem;
+}
+
+.pro img {
+	width: 20rem;
+	height: auto;
+}
+
+.right-to-left > img {
+	padding-right: 1rem;
+}
+
+.left-to-right > img {
+	padding-left: 1rem;
+}
+
+/*responsive pros*/
+@media screen and (max-width: 1000px) {
+	.pros {
+		width: auto;
+		padding: 0 1rem;
+	}
+
+	.main {
+		padding-top: 0;
+	}
+
+	.pro {
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.pro h2 {
+		padding-right: 0;
+		text-align: center;
+	}
+}
+
+/*contact bubbles, icons using font awesome*/
+
+.contact {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.contact > h1 {
+	font-size: 3rem;
+}
+.contact-bubbles {
+	display: flex;
+	flex-wrap: wrap;
+	padding-left: 0;
+	width: 100%;
+	flex-direction: row;
+	justify-content: space-around;
+}
+
+.contact-bubbles > li {
+	list-style: none;
+}
+
+.contact-bubbles > li > h3 {
+	text-align: center;
+}
+
+.contact-bubble {
+	width: 8rem;
+	/*   height: 8rem; */
+	padding: 3rem;
+	border-radius: 50%;
+	display: flex;
+	justify-content: center;
+	cursor: pointer;
+}
+
+.contact-icon {
+	--fa-beat-scale: 1.1;
+}
+
+.green {
+	background-color: #25d366;
+}
+.blue {
+	background-color: #00a6ff;
+}
+
+.red {
+	background-color: red;
+}
+
+.yellow {
+	background-color: yellow;
+}
+
+.contact-dialog {
+	font-size: 2rem;
+	border: 0.5rem solid black;
+	border-radius: 1rem;
+}
+
+.contact-dialog button {
+	padding: 1rem;
+	font-size: 2rem;
+	border-radius: 1rem;
+	border: 0.2rem solid black;
+	cursor: pointer;
+}
+
+@media screen and (max-width: 1000px) {
+	.contact-dialog {
+		margin: 1rem;
+		top: 20%;
+	}
+}

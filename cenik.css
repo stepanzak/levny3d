@@ -1,0 +1,25 @@
+.cenik-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  text-align: center;
+  padding-bottom: 1rem;
+  padding-top: 5rem;
+  justify-content: center;
+}
+
+.cenik-item {
+  border: 5px solid var(--3D-orange);
+  border-radius: 1rem;
+  box-shadow: 1px 1px 10px black;
+  padding: 1rem;
+  margin: auto 2rem;
+}
+.cenik-wrapper h2 {
+  font-size: 8rem;
+  margin: 0 auto;
+}
+
+.cenik-wrapper h3 {
+  font-size: 2rem;
+}

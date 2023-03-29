@@ -1,0 +1,18 @@
+.main {
+	text-align: center;
+}
+
+.main h1 {
+	font-size: 5rem;
+  font-weight: 1000;
+	background: #ff0ade;
+	background: linear-gradient(to right, #ff0ade 0%, #ff872b 70%);
+	-webkit-background-clip: text;
+  background-clip: text;
+	-webkit-text-fill-color: transparent;
+  text-shadow: 0px 0px 20px pink;
+}
+
+.main p {
+	font-size: 2rem;
+}
