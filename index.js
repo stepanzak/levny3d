@@ -1,24 +1,17 @@
-const phoneNumberDialog = document.getElementById("phone-number-dialog")
-const emailDialog = document.getElementById("email-dialog")
-const meetDialog = document.getElementById("meet-dialog")
-const phoneNumberBubble = document.getElementById("phone-number-bubble")
-const whatsappBubble = document.getElementById("whatsapp-bubble")
-const emailBubble = document.getElementById("email-bubble")
-const meetBubble = document.getElementById("meet-bubble")
 
-phoneNumberBubble.addEventListener("click", () => {
-  phoneNumberDialog.showModal()
-  })
 
-whatsappBubble.addEventListener("click", () => {
-  phoneNumberDialog.showModal()
-  })
 
-emailBubble.addEventListener("click", () => {
-  emailDialog.showModal()
-  })
+//responsive view: hamburger menu icon toggling menu and clicking on any menu link closing the menu
+const navLinksList = document.getElementById('nav-links')
 
-meetBubble.addEventListener("click", () => {
-  meetDialog.showModal()
-  })
+const menuIcon = document.getElementById("menu-icon")
+menuIcon.addEventListener('click', () => {
+navLinksList.style.display = (navLinksList.style.display === 'none' || navLinksList.style.display === '') ?
+      'block':
+      'none'
+})
 
+const navLinks = document.querySelectorAll("nav.top-bar > ul.links > a")
+navLinks.forEach(element => element.addEventListener('click', () => {
+  navLinksList.style.display = 'none'
+}))

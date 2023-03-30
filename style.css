@@ -82,10 +82,37 @@ body {
 	background-color: var(--3D-orange-darker);
 }
 
+#menu-icon {
+  display: none;
+}
+
 @media screen and (max-width: 1000px) {
-	.top-bar {
-		display: none;
-	}
+
+  .links {
+    display: none;
+    position: fixed;
+    margin: none;
+    padding-left: 0;
+    padding-bottom: 3rem;
+    top: 80px;
+    width: 100dvw;
+    height: auto;
+    background-color: var(--3D-orange);
+  }
+
+  .links > a {
+    font-size: 2rem;
+    margin: 2rem auto;
+  }
+
+  .links > a.get-custom-model {
+    max-height: 80px;
+  }
+
+  #menu-icon {
+    display: block;
+    margin-right: 1rem;
+  }
 }
 
 /*big intro (name and image of 3D printer)*/
@@ -160,9 +187,7 @@ body {
 
 @media screen and (max-width: 1000px) {
 	/*I love responsive webdesign 💀*/
-	.main {
-		padding-top: 0;
-	}
+	
 
 	.intro-title {
 		flex-direction: column;
@@ -258,10 +283,6 @@ body {
 	.pros {
 		width: auto;
 		padding: 0 1rem;
-	}
-
-	.main {
-		padding-top: 0;
 	}
 
 	.pro {
