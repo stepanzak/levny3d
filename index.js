@@ -13,5 +13,7 @@ navLinksList.style.display = (navLinksList.style.display === 'none' || navLinksL
 
 const navLinks = document.querySelectorAll("nav.top-bar > ul.links > a")
 navLinks.forEach(element => element.addEventListener('click', () => {
-  navLinksList.style.display = 'none'
+  if (window.innerWidth < 1000) {
+      navLinksList.style.display = 'none'
+  }
 }))
