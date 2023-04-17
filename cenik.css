@@ -23,3 +23,14 @@
 .cenik-wrapper h3 {
   font-size: 2rem;
 }
+
+@media screen and (max-width: 1000px) {
+  .cenik-wrapper {
+    flex-direction: column;
+  }
+  
+  .cenik-item {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+}
