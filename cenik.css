@@ -4,7 +4,7 @@
   align-items: center;
   text-align: center;
   padding-bottom: 1rem;
-  padding-top: 5rem;
+  padding-top: 10rem;
   justify-content: center;
 }
 
@@ -27,6 +27,7 @@
 @media screen and (max-width: 1000px) {
   .cenik-wrapper {
     flex-direction: column;
+    padding-top: 5rem;
   }
   
   .cenik-item {
